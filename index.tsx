@@ -1,17 +1,22 @@
 
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { GoogleGenAI } from "@google/genai";
 
-// 初始化 AI
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// 预设的 19 岁生日祝福语列表
+const WISHES = [
+  "十九岁，是青春最灿烂的注脚。愿向闫眼里有星辰大海，心中有万丈光芒，生日快乐！",
+  "祝向闫19岁生日快乐！愿你岁岁平安，万事顺遂，在这个美好的年纪里，永远做最快乐的自己。",
+  "步入十九岁，愿你所有的努力都不被辜负，所有的梦想都能如约而至。向闫，生日快乐！",
+  "十九岁的向闫，愿你被这个世界温柔以待，独立且自由，热烈且赤诚，前程似锦。",
+  "祝你19岁生日快乐！愿你前路繁花似锦，不负韶华，在最美好的年纪里闪闪发光。"
+];
 
 const BirthdayCake: React.FC = () => (
   <div className="relative w-40 h-40 mx-auto mb-8 animate-cake-pop">
     {/* 蜡烛 */}
     <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20">
       <div className="relative">
-        <div className="w-1 h-8 bg-yellow-200 mx-auto rounded-full"></div>
+        <div className="w-1 h-8 bg-yellow-200 mx-auto rounded-full shadow-[0_0_10px_rgba(253,224,71,0.5)]"></div>
         <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-3 h-5 bg-orange-500 rounded-full animate-flame blur-[1px]"></div>
         <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-pink-600 font-bold text-xl drop-shadow-md">19</div>
       </div>
@@ -33,28 +38,16 @@ const BirthdayCake: React.FC = () => (
 );
 
 const App: React.FC = () => {
-  const [wish, setWish] = useState<string>("正在为你准备十九岁的惊喜...");
-  const [loading, setLoading] = useState(false);
+  const [wishIndex, setWishIndex] = useState(0);
   const [showCake, setShowCake] = useState(false);
 
-  // 生成 AI 祝福
-  const fetchWish = async () => {
-    setLoading(true);
-    try {
-      const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
-        contents: "为我的好朋友‘向闫’写一段19岁生日祝福。要求：语气温柔动人，包含‘十九岁’这个关键词，50字左右。",
-      });
-      setWish(response.text || "祝你19岁生日快乐，愿你眼里有光，心中有爱。");
-    } catch (e) {
-      setWish("祝向闫19岁生日快乐！愿你岁岁平安，万事顺遂，永远做最快乐的女孩。");
-    }
-    setLoading(false);
+  const handleNextWish = () => {
+    setWishIndex((prev) => (prev + 1) % WISHES.length);
   };
 
   useEffect(() => {
-    fetchWish();
-    // 延迟显示蛋糕，制造一种“跳出来”的感觉
+    // 页面加载时随机选择一个初始祝福语
+    setWishIndex(Math.floor(Math.random() * WISHES.length));
     setTimeout(() => setShowCake(true), 500);
   }, []);
 
@@ -87,23 +80,18 @@ const App: React.FC = () => {
           <h1 className="text-4xl font-bold text-gray-800 tracking-tight">向闫，生日快乐</h1>
         </header>
 
-        <div className="py-6 px-4 bg-white/50 rounded-3xl border border-pink-50 relative min-h-[120px] flex items-center justify-center shadow-inner">
-          {loading ? (
-            <div className="flex space-x-2">
-              <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce"></div>
-              <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce [animation-delay:0.2s]"></div>
-              <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce [animation-delay:0.4s]"></div>
-            </div>
-          ) : (
-            <p className="text-gray-700 italic leading-relaxed text-lg">“{wish}”</p>
-          )}
+        <div className="py-8 px-6 bg-white/50 rounded-3xl border border-pink-50 relative min-h-[140px] flex items-center justify-center shadow-inner">
+          <p className="text-gray-700 italic leading-relaxed text-lg transition-all duration-500">
+            “{WISHES[wishIndex]}”
+          </p>
         </div>
 
         <button 
-          onClick={fetchWish}
-          className="bg-gradient-to-r from-pink-400 to-rose-400 text-white px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-pink-200 hover:-translate-y-1 transition-all active:scale-95"
+          onClick={handleNextWish}
+          className="bg-gradient-to-r from-pink-400 to-rose-400 text-white px-8 py-3 rounded-full font-medium shadow-lg hover:shadow-pink-200 hover:-translate-y-1 transition-all active:scale-95 flex items-center justify-center mx-auto gap-2"
         >
-          再收一份祝福 ✨
+          <span>再看一个祝福</span>
+          <span className="text-xl">✨</span>
         </button>
 
         <div className="pt-4 border-t border-gray-100">
@@ -111,7 +99,7 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      {/* 音乐播放器组件 */}
+      {/* 音乐播放器 */}
       <div className="mt-10 z-10 transition-all hover:scale-105">
         <iframe 
           frameBorder="no" 

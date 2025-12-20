@@ -8,12 +8,12 @@ const MusicPlayer: React.FC = () => {
         <span className="text-xl">🎵</span> 专属生日背景音
       </h3>
       <div className="w-full max-w-[330px] overflow-hidden rounded-xl shadow-inner">
-        {/* Fix: Removed invalid 'border' prop and legacy margins to resolve type errors */}
         <iframe 
           frameBorder="no" 
           width={330} 
           height={86} 
           src="//music.163.com/outchain/player?type=2&id=2021388467&auto=1&height=66"
+          allow="autoplay"
         />
       </div>
       <p className="text-xs text-pink-400">正在为你播放温馨的生日音乐...</p>

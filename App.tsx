@@ -42,7 +42,7 @@ const App: React.FC = () => {
         <div className="relative bg-white p-8 rounded-3xl shadow-2xl border-t-8 border-pink-400 transform transition-all hover:scale-[1.02]">
           <div className="flex justify-between items-center mb-6">
             <span className="text-pink-300 text-sm">To: 刘小娟</span>
-            <span className="text-pink-300 text-sm">2024</span>
+            <span className="text-pink-300 text-sm">2025</span>
           </div>
 
           <div className="space-y-4">

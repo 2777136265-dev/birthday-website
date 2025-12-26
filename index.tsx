@@ -97,24 +97,24 @@ const App: React.FC = () => {
           <div className={`z-10 w-full max-w-md bg-white/80 backdrop-blur-lg border border-white p-8 rounded-[2.5rem] shadow-2xl text-center space-y-6 transition-all duration-1000 transform ${showContent ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-20 opacity-0 scale-90'}`}>
             <header>
               <div className="inline-block bg-pink-100 text-pink-500 px-4 py-1 rounded-full text-sm font-bold mb-4 animate-bounce">
-                SINCE 2024.10 🌸
+                SINCE 2025.4.21 🌸
               </div>
               <h1 className="text-4xl font-bold text-gray-800 tracking-tight">刘小娟，生日快乐</h1>
-              <p className="text-pink-400 mt-2 font-medium">2025.12.21 • 20th Birthday</p>
+              <p className="text-pink-400 mt-2 font-medium">2025.12.26 • 20th Birthday</p>
             </header>
 
             {/* 故事时光轴 */}
             <div className="flex justify-between items-center px-4 py-4 bg-pink-50/50 rounded-2xl border border-pink-100 relative">
                 <div className="text-center">
                     <p className="text-[10px] text-pink-300 uppercase">初识</p>
-                    <p className="text-sm font-bold text-pink-500">2024.10</p>
+                    <p className="text-sm font-bold text-pink-500">2025.4.21</p>
                 </div>
                 <div className="flex-1 h-[2px] bg-pink-200 mx-2 relative">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-pink-400">✈️</div>
                 </div>
                 <div className="text-center">
                     <p className="text-[10px] text-pink-300 uppercase">二十岁</p>
-                    <p className="text-sm font-bold text-pink-500">2025.12.21</p>
+                    <p className="text-sm font-bold text-pink-500">2025.12.26</p>
                 </div>
             </div>
 

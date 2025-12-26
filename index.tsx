@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 
 const WISHES = [
-  "从2024年10月相识到2025年12月21日，转眼间迎来了你的19岁。向闫，愿你十九岁的每一天都像阳光一样灿烂！",
-  "祝向闫19岁生日快乐！很高兴在这一路时光里有你相伴。愿你岁岁平安，万事顺遂。",
-  "十九岁，是青春最美好的注脚。向闫，愿你眼里有星辰大海，心中有万丈光芒，生日快乐！",
-  "从初识到现在的十九岁，愿你被这个世界温柔以待。独立且自由，热烈且赤诚，前程似锦。",
-  "向闫，祝你19岁生日快乐！愿你前路繁花似锦，不负韶华，在最美好的年纪里闪闪发光。"
+  "从2025年4月21日相识到2025年12月26日，转眼间迎来了你的20岁。刘小娟，愿你二十岁的每一天都像阳光一样灿烂！",
+  "祝刘小娟20岁生日快乐！很高兴在这一路时光里有你相伴。愿你岁岁平安，万事顺遂。",
+  "二十岁，是青春最美好的注脚。刘小娟，愿你眼里有星辰大海，心中有万丈光芒，生日快乐！",
+  "从初识到现在的二十岁，愿你被这个世界温柔以待。独立且自由，热烈且赤诚，前程似锦。",
+  "刘小娟，祝你20岁生日快乐！愿你前路繁花似锦，不负韶华，在最美好的年纪里闪闪发光。"
 ];
 
 const BirthdayCake: React.FC = () => (
@@ -16,7 +16,7 @@ const BirthdayCake: React.FC = () => (
       <div className="relative">
         <div className="w-1 h-8 bg-yellow-200 mx-auto rounded-full shadow-[0_0_10px_rgba(253,224,71,0.5)]"></div>
         <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-3 h-5 bg-orange-500 rounded-full animate-flame blur-[1px]"></div>
-        <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-pink-600 font-bold text-xl drop-shadow-md">19</div>
+        <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-pink-600 font-bold text-xl drop-shadow-md">20</div>
       </div>
     </div>
     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-32 h-16 bg-pink-200 rounded-t-lg shadow-inner border-b-4 border-pink-300 z-10">
@@ -63,8 +63,8 @@ const App: React.FC = () => {
                 <span className="absolute -top-2 -right-2 text-2xl animate-pulse">🐑</span>
             </div>
           </div>
-          <h1 className="text-3xl font-bold text-pink-600 mb-4">向闫，你有一份特别的礼物</h1>
-          <p className="text-pink-400 mb-8 font-light">来自“飞翔的羊羊”的 19 岁祝福</p>
+          <h1 className="text-3xl font-bold text-pink-600 mb-4">刘小娟，你有一份特别的礼物</h1>
+          <p className="text-pink-400 mb-8 font-light">来自“飞翔的羊羊”的 20 岁祝福</p>
           <button 
             onClick={handleStart}
             className="bg-pink-500 text-white px-12 py-4 rounded-full text-xl font-bold shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center gap-2"
@@ -99,8 +99,8 @@ const App: React.FC = () => {
               <div className="inline-block bg-pink-100 text-pink-500 px-4 py-1 rounded-full text-sm font-bold mb-4 animate-bounce">
                 SINCE 2024.10 🌸
               </div>
-              <h1 className="text-4xl font-bold text-gray-800 tracking-tight">向闫，生日快乐</h1>
-              <p className="text-pink-400 mt-2 font-medium">2025.12.21 • 19th Birthday</p>
+              <h1 className="text-4xl font-bold text-gray-800 tracking-tight">刘小娟，生日快乐</h1>
+              <p className="text-pink-400 mt-2 font-medium">2025.12.21 • 20th Birthday</p>
             </header>
 
             {/* 故事时光轴 */}
@@ -113,7 +113,7 @@ const App: React.FC = () => {
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-pink-400">✈️</div>
                 </div>
                 <div className="text-center">
-                    <p className="text-[10px] text-pink-300 uppercase">十九岁</p>
+                    <p className="text-[10px] text-pink-300 uppercase">二十岁</p>
                     <p className="text-sm font-bold text-pink-500">2025.12.21</p>
                 </div>
             </div>

@@ -4,11 +4,11 @@ import FloatingElements from './components/FloatingElements';
 import MusicPlayer from './components/MusicPlayer';
 
 const WISHES = [
-  "十九岁，是青春最灿烂的注脚。愿向闫眼里有星辰大海，心中有万丈光芒，生日快乐！",
-  "祝向闫19岁生日快乐！愿你岁岁平安，万事顺遂，在这个美好的年纪里，永远做最快乐的自己。",
-  "步入十九岁，愿你所有的努力都不被辜负，所有的梦想都能如约而至。向闫，生日快乐！",
-  "十九岁的向闫，愿你被这个世界温柔以待，独立且自由，热烈且赤诚，前程似锦。",
-  "祝你19岁生日快乐！愿你前路繁花似锦，不负韶华，在最美好的年纪里闪闪发光。"
+  "二十岁，是青春最灿烂的注脚。愿刘小娟眼里有星辰大海，心中有万丈光芒，生日快乐！",
+  "祝刘小娟20岁生日快乐！愿你岁岁平安，万事顺遂，在这个美好的年纪里，永远做最快乐的自己。",
+  "步入二十岁，愿你所有的努力都不被辜负，所有的梦想都能如约而至。刘小娟，生日快乐！",
+  "二十岁的刘小娟，愿你被这个世界温柔以待，独立且自由，热烈且赤诚，前程似锦。",
+  "祝你20岁生日快乐！愿你前路繁花似锦，不负韶华，在最美好的年纪里闪闪发光。"
 ];
 
 const App: React.FC = () => {
@@ -31,7 +31,7 @@ const App: React.FC = () => {
           <span className="text-5xl">👑</span>
         </div>
         <h1 className="text-4xl md:text-6xl font-bold text-pink-600 mb-2 drop-shadow-sm">
-          向闫，生日快乐！
+          刘小娟，生日快乐！
         </h1>
         <p className="text-xl md:text-2xl text-pink-400 font-light">
           Happy <span className="font-bold text-pink-500">19th</span> Birthday
@@ -41,12 +41,12 @@ const App: React.FC = () => {
       <div className="z-10 w-full max-w-md perspective-1000 mb-12">
         <div className="relative bg-white p-8 rounded-3xl shadow-2xl border-t-8 border-pink-400 transform transition-all hover:scale-[1.02]">
           <div className="flex justify-between items-center mb-6">
-            <span className="text-pink-300 text-sm">To: 向闫</span>
+            <span className="text-pink-300 text-sm">To: 刘小娟</span>
             <span className="text-pink-300 text-sm">2024</span>
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-pink-700 mb-4 text-center">✨ 十九岁的你 ✨</h2>
+            <h2 className="text-2xl font-bold text-pink-700 mb-4 text-center">✨ 二十岁的你 ✨</h2>
             
             <div className="bg-pink-50/50 p-6 rounded-2xl border border-dashed border-pink-200 min-h-[120px] flex items-center justify-center text-center shadow-inner">
               <p className="text-pink-700 leading-relaxed italic text-lg">
@@ -73,13 +73,13 @@ const App: React.FC = () => {
 
       <div className="z-10 mt-16 text-center max-w-lg px-4">
         <p className="text-pink-400/80 text-sm italic mb-8">
-          十九岁，是一个充满无限可能的年纪。<br/>
+          二十岁，是一个充满无限可能的年纪。<br/>
           愿你眼里常有笑意，心中常有梦想。<br/>
           无论走到哪里，都有繁花相伴。
         </p>
         <div className="flex justify-center gap-4">
           <span className="w-12 h-0.5 bg-pink-200 self-center"></span>
-          <span className="text-pink-300 font-bold">💖 向闫 19岁 生日快乐 💖</span>
+          <span className="text-pink-300 font-bold">💖 刘小娟 20岁 生日快乐 💖</span>
           <span className="w-12 h-0.5 bg-pink-200 self-center"></span>
         </div>
       </div>
